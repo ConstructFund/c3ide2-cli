@@ -5,19 +5,19 @@ const path = require('path');
 
 const addonTemplate = {
     plugin: {
-        url: 'https://github.com/armandoalonso/c3ide2-framework/plugins', //'https://github.com/ConstructFund/c3ide2-framework/plugins',
+        url: 'https://github.com/ConstructFund/c3ide2-framework/plugins',
         config: 'pluginConfig.js'
     },
     behavior: {
-        url: 'https://github.com/armandoalonso/c3ide2-framework/behaviors', //'https://github.com/ConstructFund/c3ide2-framework/behaviors',
+        url: 'https://github.com/ConstructFund/c3ide2-framework/behaviors',
         config: 'behaviorConfig.js'
     },
     effect: {
-        url: 'https://github.com/armandoalonso/c3ide2-framework/effects', //'https://github.com/ConstructFund/c3ide2-framework/effects',
+        url: 'https://github.com/ConstructFund/c3ide2-framework/effects',
         config: 'effectConfig.js'
     },
     theme: {
-        url: 'https://github.com/armandoalonso/c3ide2-framework/themes', //'https://github.com/ConstructFund/c3ide2-framework/themes',
+        url: 'https://github.com/ConstructFund/c3ide2-framework/themes',
         config: 'themeConfig.js'
     }
 }

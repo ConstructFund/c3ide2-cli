@@ -8,8 +8,7 @@ The CLI has an interactive mode, running the command will guide you through the 
 c3ide2-cli-win.exe
 ```
 
-![](imgs\c3ide2_cli_example1.png)
-
+![](./imgs/c3ide2_cli_example1.png)
 
 ---
 

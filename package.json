@@ -1,17 +1,26 @@
 {
   "name": "c3ide2-cli",
+  "description": "A simple CLI for scaffolding construct 3 addons using c3ide2-framework",
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
-  "bin": {
-    "scaff": "index.js"
-  },
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "conf": "^10.0.3",
     "degit": "^2.8.4",
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "pkg": "^5.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg . --out-path dist",
+    "run": "node index.js"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "scripts": [ "index.js", "commands/*.js"],
+    "outputPath": "dist"
   },
   "engines": {
     "node": ">=0.16.9"

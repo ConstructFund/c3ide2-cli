@@ -37,6 +37,7 @@ async function parseArguments(options) {
 }
 
 program
+.name('addon-create')
 .version(package.version)
 .description('a cli for generating addon\'s for construct 3 using c3ide2-framework')
 .option('-t, --type <type>', 'the type of addon to create') // plugin / behavior / effect 

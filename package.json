@@ -1,7 +1,7 @@
 {
   "name": "c3ide2-cli",
   "description": "A simple CLI for scaffolding construct 3 addons using c3ide2-framework",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {

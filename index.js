@@ -3,6 +3,7 @@ const {program} = require('commander');
 const chalk = require('chalk');
 const package = require('./package.json'); 
 const scaffold = require('./commands/scaffold');
+const server = require('./commands/server');
 
 const questions = [
     {
@@ -51,6 +52,14 @@ program
     console.log(chalk.green.bold('author: ') + chalk.white.bold(opts.addonAuthor));
   
     scaffold(opts.addonType, opts);
+});
+
+program
+.command('server')
+.description('start a local server for testing addons')
+.option('-p, --path <path>', 'the path to root folder of the addon', process.cwd())
+.action((options) => {
+    server(options.path);
 });
 
 program.parse(process.argv);

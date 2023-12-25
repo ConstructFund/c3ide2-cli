@@ -136,22 +136,7 @@ function maybeExecuteInitScript(addonPath) {
     const initScriptPath = path.resolve(process.cwd(), addonPath, "init.js");
     if (fs.existsSync(initScriptPath)) {
       console.log(`${chalk.white.bold("executing init script ...")}`);
-      const { exec } = require("child_process");
-      exec(
-        "node init.js",
-        { cwd: path.resolve(process.cwd(), addonPath) },
-        (err, stdout, stderr) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-            return;
-          }
-          console.log(
-            `${chalk.green.bold("init script executed successfully")}`
-          );
-          resolve();
-        }
-      );
+      require(initScriptPath);
     } else {
       resolve();
     }

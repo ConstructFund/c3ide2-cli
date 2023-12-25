@@ -28,6 +28,7 @@ async function create(type, params) {
   await installDependencies(path);
   await maybeExecuteInitScript(path);
   updateAddonPlaceholder(path, type, params);
+  console.log(`${chalk.green.bold("addon created successfully")}`);
 }
 
 function validateValues(type, params) {
@@ -94,6 +95,7 @@ async function cloneTemplate(type, params) {
 }
 
 function updateAddonPlaceholder(addonPath, type, params) {
+  console.log(`${chalk.white.bold("updating addon config ...")}`);
   const { addonName, addonAuthor } = params;
   const templateFile = addonTemplate[type].config;
   const addonConfigPath = path.resolve(
@@ -136,7 +138,15 @@ function maybeExecuteInitScript(addonPath) {
     const initScriptPath = path.resolve(process.cwd(), addonPath, "init.js");
     if (fs.existsSync(initScriptPath)) {
       console.log(`${chalk.white.bold("executing init script ...")}`);
-      require(initScriptPath);
+      const init = require(initScriptPath);
+      init()
+        .then(() => {
+          resolve();
+        })
+        .catch((err) => {
+          console.error(err);
+          reject(err);
+        });
     } else {
       resolve();
     }

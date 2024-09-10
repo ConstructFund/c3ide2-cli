@@ -10,7 +10,7 @@ const questions = [
         type: 'list',
         name: 'addonType',
         message: 'Select addon type ...',
-        choices: ['plugin', 'behavior', 'effect', 'theme']
+        choices: ['plugin', 'plugin_v2', 'behavior', 'behavior_v2', 'effect', 'theme']
     },
     {
         type: 'input',

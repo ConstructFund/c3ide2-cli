@@ -8,8 +8,16 @@ const addonTemplate = {
     url: "https://github.com/ConstructFund/c3ide2-framework/plugins",
     config: "pluginConfig.js",
   },
+  plugin_v2: {
+    url: "https://github.com/ConstructFund/c3ide2-framework/plugins_v2#add_sdk_v2_templates",
+    config: "pluginConfig.js",
+  },
   behavior: {
     url: "https://github.com/ConstructFund/c3ide2-framework/behaviors",
+    config: "behaviorConfig.js",
+  },
+  behavior_v2: {
+    url: "https://github.com/ConstructFund/c3ide2-framework/behaviors_v2#add_sdk_v2_templates",
     config: "behaviorConfig.js",
   },
   effect: {

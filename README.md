@@ -1,3 +1,6 @@
+### FOR SDK V2 SUPPORT, USE THE NEW ADDON FRAMEWORK
+https://github.com/ConstructFund/construct-addon-wizard-scaffold
+
 # c3IDE2 Command Line Interface
 
 ## Usage
